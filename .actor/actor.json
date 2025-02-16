@@ -1,0 +1,83 @@
+{
+	"actorSpecification": 1,
+	"name": "linkedin-scraper",
+	"title": "LinkedIn Scraper",
+	"description": "Scrapers for LinkedIn, designed to efficiently gather data on company followers and post likers. By consolidating the scraping and enrichment processes, these scrapers aim to streamline data collection and reduce costs compared to existing methods.",
+	"version": "0.0",
+	"meta": {
+		"templateId": "python-start"
+	},
+	"input": "./input_schema.json",
+	"readme": "../README.md",
+	"dockerfile": "./Dockerfile",
+	"storages": {
+		"dataset": {
+			"actorSpecification": 1,
+			"title": "LinkedIn Scraper",
+			"views": {
+				"results": {
+					"title": "Scraped Results",
+					"transformation": {
+						"fields": [
+							"fullName",
+							"jobTitle",
+							"profileUrl",
+							"imageUrl",
+							"connectionDegree",
+							"timestamp",
+							"positionTitle",
+							"companyLogo",
+							"companyName",
+							"locationName"
+						]
+					},
+					"display": {
+						"component": "table",
+						"properties": {
+							"fullName": {
+								"label": "fullName",
+								"format": "string"
+							},
+							"jobTitle": {
+								"label": "jobTitle",
+								"format": "string"
+							},
+							"profileUrl": {
+								"label": "profileUrl",
+								"format": "link"
+							},
+							"imageUrl": {
+								"label": "imageUrl",
+								"format": "image"
+							},
+							"connectionDegree": {
+								"label": "connectionDegree",
+								"format": "string"
+							},
+							"timestamp": {
+								"label": "timestamp",
+								"format": "date"
+							},
+							"positionTitle": {
+								"label": "positionTitle",
+								"format": "string"
+							},
+							"companyLogo": {
+								"label": "companyLogo",
+								"format": "image"
+							},
+							"companyName": {
+								"label": "companyName",
+								"format": "string"
+							},
+							"locationName": {
+								"label": "locationName",
+								"format": "string"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

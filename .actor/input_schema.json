@@ -1,0 +1,26 @@
+{
+  "title": "Add two integers",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "cookies": {
+      "title": "Cookies",
+      "type": "string",
+      "description": "The cookie value to be used for the scraping session.",
+      "editor": "textfield",
+      "prefill": "your_cookie_here"
+    },
+    "post_url": {
+      "title": "Post Url",
+      "type": "string",
+      "description": "The post URL you want to scrape follower information from.",
+      "editor": "textfield",
+      "prefill": "https://www.linkedin.com/feed/update/urn:li:activity:1234567890",
+      "pattern": "https://www\\.linkedin\\.com/feed/update/urn:li:activity:[A-Za-z0-9]+"
+    }
+  },
+  "required": [
+    "cookies",
+    "post_url"
+  ]
+}
