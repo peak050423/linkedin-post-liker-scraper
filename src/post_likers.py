@@ -78,7 +78,7 @@ def getLikersList(post_url, current_timestamp, cookies):
 
                             likers_info.append(likers_data)
 
-        experience_datas = get_experience_datas(actoUrns, total)
+        experience_datas = get_experience_datas(actoUrns, total, cookies)
 
         i = 0
         for element in likers_info:
