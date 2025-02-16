@@ -32,9 +32,6 @@ async def main():
         cookies = {cookie['name']: cookie['value'] for cookie in linkedin_cookies}
         result = []
 
-        if post_url:
-            raise ValueError('Missing required parameters for company scraper')
-
         likers_info = getLikersList(post_url, current_timestamp, cookies)
 
         if not likers_info:
