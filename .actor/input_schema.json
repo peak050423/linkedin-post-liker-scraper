@@ -5,10 +5,10 @@
   "properties": {
     "cookies": {
       "title": "Cookies",
-      "type": "string",
+      "type": "array",
       "description": "The cookie value to be used for the scraping session.",
-      "editor": "textfield",
-      "prefill": "your_cookie_here"
+      "editor": "json",
+      "prefill": []
     },
     "post_url": {
       "title": "Post Url",
