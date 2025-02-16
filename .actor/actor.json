@@ -56,7 +56,7 @@
 							},
 							"timestamp": {
 								"label": "timestamp",
-								"format": "date"
+								"format": "string"
 							},
 							"positionTitle": {
 								"label": "positionTitle",

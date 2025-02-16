@@ -4,14 +4,10 @@ import platform
 from .post_likers import getLikersList
 
 def get_current_timestamp():
-    """
-    Get current timestamp (cross-platform).
-    """
     current_datetime = datetime.now()
-    if platform.system() == "Windows":
-        return current_datetime.strftime('%#m-%d-%Y_%#I-%M-%p')
-    else:
-        return current_datetime.strftime('%-m-%d-%Y_%-I-%M-%p')
+    formatted_datetime = current_datetime.strftime('%#m-%d-%Y_%#I-%M-%p')
+
+    return formatted_datetime
 
 async def main():
     async with Actor:
