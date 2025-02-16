@@ -50,7 +50,7 @@ async def main():
                 "profileUrl": row.get('profileUrl'),
                 "imageUrl": row.get('imageUrl'),
                 "connectionDegree": row.get('connectionDegree'),
-                "timestamp": row.get('timestamp'),
+                "timestamp": current_timestamp,
                 "positionTitle": row.get('positionTitle'),
                 "companyLogo": row.get('companyLogo'),
                 "companyName": row.get('companyName'),
