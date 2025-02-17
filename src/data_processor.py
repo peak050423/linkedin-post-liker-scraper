@@ -87,8 +87,9 @@ def get_experience_datas(profile_urns, follower_number, cookies):
         records = []
     
         for url, experience_data in experience_datas.items():
-            componentCount = sum(1 for item in experience_data["included"] if "components" in item and item["components"])
-            if componentCount > 1:
+            if experience_data and "included" in experience_data and experience_data["included"]:
+                componentCount = sum(1 for item in experience_data["included"] if "components" in item and item["components"])
+            if componentCount > 1 and experience_data and "included" in experience_data:
                 for component in experience_data["included"]:
                     i = 0
                     flag = 0
