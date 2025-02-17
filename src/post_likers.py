@@ -23,17 +23,17 @@ def getLikersList(post_url, current_timestamp, cookies):
 
         print('Total Likers: ', total)
 
+        total = int(total)
         request_num = ceil(total/100)
         likers_info = []
         actoUrns = []
-        element_number = 1
 
         for i in range(request_num):
             if int(total) > (i + 1) * 100: endPoint = 100 
             else: endPoint = int(total) - i * 100
             startPoint = i * 100
 
-            url = f'https://www.linkedin.com/voyager/api/graphql?includeWebMetadata=true&variables=(count:{endPoint},start:{startPoint},threadUrn:urn%3Ali%3AugcPost%3A7290004779827703810)&queryId=voyagerSocialDashReactions.cab051ffdf47c41130cdd414e0097402'
+            url = f'https://www.linkedin.com/voyager/api/graphql?includeWebMetadata=true&variables=(count:{endPoint},start:{startPoint},threadUrn:urn%3Ali%3AugcPost%3A{post_id})&queryId=voyagerSocialDashReactions.cab051ffdf47c41130cdd414e0097402'
             response = fetch_data(url, cookies)
 
             if response:
